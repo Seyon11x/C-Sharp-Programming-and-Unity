@@ -21,8 +21,8 @@ namespace ProgrammingAssignment1
             Console.Write("Enter first X value: ");
             float point2Y = float.Parse(Console.ReadLine());
 
-            float deltaX = point1X - point2X;
-            float deltaY = point1Y - point2Y;
+            float deltaX = point2X >= point1X ? point1X - point2X : point2X - point1X;
+            float deltaY = point2Y >= point1Y ? point1Y - point2Y : point2Y - point1Y;
 
             float distance = (float) Math.Sqrt(Math.Pow(deltaX, 2) + Math.Pow(deltaY, 2));
             float angle = (float) Math.Atan2( deltaY, deltaX) * (float) (180 / Math.PI);
